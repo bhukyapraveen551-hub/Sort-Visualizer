@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort viz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 >Sorting Algo vis</h2>
+    <div class="container">
+        <div id="visualizer">
+            <div id="display1" class="display">
+                bubble sort
+                <div id="graph1" class="barContainer"></div>
+                <div class="description">
+                    <summary><strong>Bubble Sort</strong></summary>
+                    <p>
+                    Bubble Sort compares adjacent elements and swaps them if they are in the wrong order. With each full pass, the largest unsorted element "bubbles" to the end of the array. This continues until the array is sorted.
+                    </p>
+                    <ul>
+                    <li><strong>Best case:</strong> O(n)</li>
+                    <li><strong>Average case:</strong> O(n²)</li>
+                    <li><strong>Worst case:</strong> O(n²)</li>
+                    <li><strong>Space:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="display2" class="display">
+                Selectionsort
+                <div id="graph2" class="barContainer"></div>
+                <div class="description">
+                    <summary><strong>Insertion Sort</strong></summary>
+                    <p>
+                    Insertion Sort builds the sorted array one item at a time. For each new element, it scans the sorted part from right to left and inserts the element at the correct position by shifting others as needed.
+                    </p>
+                    <ul>
+                    <li><strong>Best case:</strong> O(n)</li>
+                    <li><strong>Average case:</strong> O(n²)</li>
+                    <li><strong>Worst case:</strong> O(n²)</li>
+                    <li><strong>Space:</strong> O(1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="display3" class="display">
+                merge sort
+                <div id="graph3" class="barContainer"></div>
+                <div class="description">
+                    <summary><strong>Merge Sort</strong></summary>
+                    <p>
+                    Merge Sort uses a divide-and-conquer approach. It splits the array into halves, recursively sorts them, and merges the sorted halves. The merge step ensures elements are placed in the correct order.
+                    </p>
+                    <ul>
+                    <li><strong>Best case:</strong> O(n log n)</li>
+                    <li><strong>Average case:</strong> O(n log n)</li>
+                    <li><strong>Worst case:</strong> O(n log n)</li>
+                    <li><strong>Space:</strong> O(n)</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="display4" class="display">
+                quick sort
+                <div id="graph4" class="barContainer"></div>
+                <div class="description">
+                   <summary><strong>Quick Sort</strong></summary>
+                    <p>
+                    Quick Sort selects a pivot element(represented in red) and partitions the array so that elements less than the pivot go to the left and greater ones go to the right. It then recursively sorts the partitions. Good pivot choice is key to performance.
+                    </p>
+                    <ul>
+                    <li><strong>Best case:</strong> O(n log n)</li>
+                    <li><strong>Average case:</strong> O(n log n)</li>
+                    <li><strong>Worst case:</strong> O(n²)</li>
+                    <li><strong>Space:</strong> O(log n)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="input">
+            Array size
+            <input id="arraysize" type="number" style="display: block;" placeholder="Enter Array size">
+            Edit array elements
+            <textarea id="elementeditor" rows="5" cols="40" placeholder="Enter text here..." style="width: 85%; display: block;"></textarea>
+            <button id="reverse">Reverse</button>
+            <button id="random">Random</button>
+            
+        </div>
+        <div id="algoSelector">Algo selector
+            <div>
+            <button id="algo1" class="algobtn">Bubble Sort</button>
+            <button id="algo2" class="algobtn">Selection Sort</button>
+            <button id="algo3" class="algobtn">Merge Sort</button>
+            <button id="algo4" class="algobtn">Quick Sort</button>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" id="stepModeToggle"> Step-by-step Mode
+                </label>
+                <button id="nextStepBtn" disabled>Next Step</button>
+            </div>
+                
+            <div>
+                <label for="speed">Speed:</label>
+                <input type="range" id="speed" min="1" max="10000" step="10" value="100">
+                
+                <button id="sortStarter">Start</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
